@@ -1,0 +1,613 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgb(235, 235, 235, 0.9);
+  font-family: "poppins";
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 10;
+}
+
+.section {
+  padding: 7vw;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+button {
+  font-family: "poppins", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  gap: 16px;
+  font-size: 18px;
+  border-bottom: 1px solid;
+  padding: 16px 0px;
+}
+
+#preloader {
+  width: 100%;
+  height: 100%;
+  background-color: #0c0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 40vw;
+    height: auto;
+
+    path{
+      fill: rgba(201, 13, 13, 0.329);
+      stroke: rgb(255, 0, 0);
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-position: 50% 0%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .esquerda {
+    width: 30%;
+    z-index: 3;
+
+    h3 {
+      font-size: 18px;
+      margin: 4px;
+      font-weight: 500;
+      letter-spacing: 6px;
+    }
+
+    h1 {
+      font-size: 3.7vw;
+      font-family: "Benguiat";
+    }
+  }
+
+  .direita {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    z-index: 3;
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 12px;
+      display: flex;
+      text-align: end;
+    }
+  }
+}
+
+.hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.secaocidade {
+  flex-direction: column;
+  padding: 7vw;
+
+  .titulocidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  .cards {
+    margin-top: 7vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .card1 {
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-image: url(imagens/card1.webp);
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding: 10px;
+    }
+
+    .card2 {
+      background-image: url(imagens/card2.webp);
+      background-position: center;
+      background-size: cover;
+      width: 32%;
+      aspect-ratio: 16/9;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding: 10px;
+    }
+
+    .card3 {
+      background-image: url(imagens/card3.webp);
+      background-position: center;
+      background-size: cover;
+      width: 32%;
+      aspect-ratio: 16/9;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding: 10px;
+    }
+  }
+}
+
+.fundosecao23 {
+  background-image: url(imagens/bg-sec2.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  background-color: #0c0102;
+}
+
+.secaodepoimentos {
+  flex-direction: column;
+  padding: 7vw;
+
+  .logotipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 4vh;
+  }
+
+  .depoimentos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    gap: 20px;
+
+    .depoimento {
+      width: 27%;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  font-size: 1.2vw;
+}
+
+.secaoobrigado {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7vw;
+  z-index: 10;
+  position: relative;
+  background-color: #0c0102;
+
+  h2 {
+    margin-top: 60px;
+    font-size: 40px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .textocidade {
+    width: 100%;
+    display: none;
+    z-index: 2;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(imagens/bg-footer.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+
+  .conteudofooter {
+    display: flex;
+    padding: 7vw;
+
+    .footerdireita {
+      width: 30%;
+
+      h3 {
+        font-size: 18px;
+        margin: 4px;
+        font-weight: 500;
+        letter-spacing: 6px;
+      }
+
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+      }
+    }
+
+    .informacoes {
+      display: flex;
+      justify-content: end;
+      flex: 1;
+      align-items: center;
+      gap: 6%;
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .redessociais {
+        ul {
+          display: flex;
+          gap: 13px;
+        }
+      }
+    }
+  }
+
+  .logotiposfooter {
+    display: flex;
+    margin-top: 4vw;
+    justify-content: space-between;
+    padding: 0vw 4vw;
+  }
+
+  .textoinfinito {
+    display: flex;
+    width: max-content;
+    margin-bottom: 80px;
+
+    h2 {
+      color: #9e9e9e;
+      font-family: "Benguiat", sans-serif;
+      font-size: 12vw;
+      mix-blend-mode: color-dodge;
+      animation: textoinfinito 10s infinite linear;
+      padding-left: 8vw;
+    }
+  }
+}
+
+@keyframes textoinfinito {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .secaocidade {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .titulocidade {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .secaocidade {
+    .cards {
+      .card1 {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+      }
+
+      .card {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+      }
+
+      .card2 {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+      }
+
+      .card3 {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+      }
+    }
+  }
+
+  .logotipos {
+    margin-bottom: 6vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 4vw;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 20vw 0vw 0vw 0vw;
+
+    .esquerda {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      h1 {
+        font-size: 10vw;
+        width: 70%;
+        text-align: center;
+      }
+    }
+
+    .direita {
+      width: 100%;
+      padding: 10vw;
+      align-items: start;
+
+      p {
+        font-size: 21px;
+        text-align: center;
+      }
+    }
+  }
+
+  .secaocidade {
+    button {
+      display: none;
+    }
+
+    .cards {
+      flex-direction: column;
+      gap: 20px;
+
+      .card1,
+      .card2,
+      .card3 {
+        width: 90%;
+      }
+    }
+
+    .titulocidade {
+      h2 {
+        width: 100%;
+        font-size: 6vw;
+      }
+    }
+  }
+
+  .secaodepoimentos {
+    .logotipos {
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 45%;
+      }
+    }
+
+    .depoimentos {
+      flex-direction: column;
+      width: 100%;
+
+      .depoimento {
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoobrigado {
+    width: 100%;
+
+    ul {
+      display: none;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 6vw;
+      text-align: center;
+    }
+
+    .textocidade {
+      display: flex;
+      width: 100%;
+    }
+
+    .listarolante {
+      display: flex;
+      list-style: none;
+      flex-shrink: 0;
+      width: max-content;
+      justify-content: space-around;
+      align-items: center;
+      animation: ul 14s infinite linear;
+
+      li {
+        padding-left: 9vw;
+        font-size: 5vw;
+        white-space: nowrap;
+      }
+    }
+
+    .listarolante {
+      display: flex;
+      list-style: none;
+      flex-shrink: 0;
+      width: max-content;
+      justify-content: space-around;
+      align-items: center;
+      animation: ul 14s infinite linear;
+
+      li {
+        padding-left: 9vw;
+        font-size: 5vw;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+
+    .conteudofooter {
+      margin-top: 6vw;
+      flex-direction: column;
+
+      .footerdireita {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+        h2 {
+          font-size: 12vw;
+          margin-bottom: 40px;
+        }
+
+        h3 {
+          font-size: 4vw;
+        }
+      }
+    }
+
+    .informacoes {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .institucional {
+        ul {
+          font-size: 16px;
+        }
+      }
+
+      .redessociais {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: 6vw;
+          margin-bottom: 10px;
+        }
+      }
+
+      .parceiros {
+        width: 56%;
+
+        h4 {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .logotiposfooter {
+      img:nth-child(1) {
+        width: 20vw;
+      }
+
+      img:nth-child(2) {
+        width: 15vw;
+      }
+    }
+
+    .textoinfinito {
+      h2 {
+        font-size: 20vw;
+      }
+    }
+  }
+}
+
+@keyframes ul {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
